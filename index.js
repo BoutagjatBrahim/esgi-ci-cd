@@ -1,4 +1,4 @@
-/*eslint semi: ["warning", "always"]*/
+/* eslint semi: ["warn", "always"] */
 
 const http = require('http');
 
