@@ -9,7 +9,9 @@ jobs:
       IMAGE_NAME: "mynode"
     steps:
       - uses: actions/checkout@v4 
+      - run: hadolint ./Dockerfile
       - run: docker image build --tag="${IMAGE_NAME}" ./
       # Uncomment to validate your work (should fail the next step)
       # - run: echo 'Hello Error' > ./index.js
       - run: docker container run --volume="$(pwd)":"$(pwd)" --workdir="$(pwd)" "${IMAGE_NAME}" npm run lint
+      
