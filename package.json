@@ -4,7 +4,7 @@
     "description": "A web application which says hello",
     "main": "index.js",
     "scripts": {
-        "lint": "jshint index.js",
+        "lint": "eslint .",
         "start": "node index.js"
     },
     "author": "",
@@ -13,6 +13,10 @@
         "node": "23"
     },
     "devDependencies": {
+        "@eslint/js": "^9.16.0",
+        "eslint": "^9.16.0",
+        "eslint-plugin-react": "^7.37.2",
+        "globals": "^15.13.0",
         "jshint": "^2.13.6"
     },
     "jshintConfig": {
